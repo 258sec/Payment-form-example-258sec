@@ -18,12 +18,14 @@
 
   <body>
     <main class="container-fluid p-5">
+      <!-------Card---------->
       <div class="card text-center">
-        <header class="card-header d-flex"><h1>Payment form example</h1></header>
+        <!--------------Header------------->
+        <header class="card-header bg-warning bg-opacity-25 d-flex"><h1>Payment form example</h1></header>
         <form> 
         <div class="card-body">
           <div class="row g-3">
-            <!-------- Alerta inicio-------->
+            <!-------- Alerta---------->
             <div class="col-12">
               <div
                 class="alert alert-danger d-flex justify-content-start"
@@ -32,7 +34,7 @@
                 <p class="m-0"><strong>Some fields are missing</strong></p>
               </div>
             </div>
-
+              <!-------- Card---------->
             <div class="col-12 col-md-5 col-lg-5 d-flex flex-column text-start">
               <label for="card" class="form-label"
                 ><strong>Card #</strong></label
@@ -48,6 +50,8 @@
                 required
               />
             </div>
+
+            <!-------- CVC---------->
             <div class="col-6 col-md-3 d-flex flex-column text-start">
               <label for="cvc"  class="form-label"><strong>CVC #</strong></label>
               <input
@@ -61,6 +65,8 @@
                 required
               />
             </div>
+
+            <!-------- Amount---------->
             <div class="col-6 col-md-4  d-flex flex-column text-start">
               <label for="amount" class="form-label"
                 ><strong>Amount $</strong></label
@@ -75,19 +81,24 @@
                 
               />
             </div>
-
+              
+            <!-------- First Name---------->
             <div class="col-6 col-md-6  d-flex flex-column text-start">
               <label for="FirstName" class="form-label "
                 ><strong> First Name</strong></label
               >
               <input id="FirstName" type="text" pattern="[a-zA-Z]+" required class="form-control" />
             </div>
+
+            <!-------- Last Name---------->
             <div class="col-6 col-md-6  d-flex flex-column text-start">
               <label for="LastName" class="form-label"
                 ><strong> Last Name</strong></label
               >
               <input id="LastName" type="text" pattern="[a-zA-Z]+" required class="form-control" />
             </div>
+
+            <!-------- City select--------------------->
             <div class="col-6 col-md-6  d-flex flex-column text-start">
               <label for="city" class="form-label"><strong>City</strong></label>
               <input id="city" type="text" pattern="[a-zA-Z]+" required class="form-control" />
@@ -108,15 +119,19 @@
                 <option value="3">France</option>
               </select>
             </div>
+
+            <!-------- Codigo postal---------->
             <div class="col-6 col-md-3  d-flex flex-column text-start">
               <label for="postalcode"  class="form-label"
                 ><strong>Postal Code</strong></label
               >
               <input type="text" id="postalcode" maxlength="5" minlength="5" required pattern="[0-9]+"class="form-control" />
             </div>
+
+            <!-------- Pay Method---------->
             <div class="col-6  text-start">
-              <label for="paymetod" class="form-label"
-                ><strong>We accept:</strong></label>
+                <strong>We accept:</strong>
+
                 <div class="col-7 bg-secondary p-2 mt-2 border justify-content-between rounded d-flex flex-wrap">
                   <!---Mastercard---->
                   <div class="form-check form-check-inline ">
@@ -164,7 +179,7 @@
                       ></i
                     ></label>
                   </div>
-                  <!------------Crypto------------->
+                  <!------------Crypto BTC------------->
                   <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
@@ -180,9 +195,11 @@
                       ></i
                     >
                   </div>
+
                 </div>
-              </label>
+
             </div>
+            <!-------- Mensaje ---------->
             <div class="col-12 col-md-6 d-flex flex-column text-start">
               <label for="Message" class="form-label"
                 ><strong>Message</strong>
@@ -190,15 +207,17 @@
               <textarea class="form-control" id="Message"></textarea>
               <p class="text-secondary">Add any notes there.</p>
             </div>
+
           </div>
         </div>
-
-        <div class="card-footer text-body-secondary">
+         <!----------------------Footer------------------->
+        <footer class="card-footer bg-warning bg-opacity-25 text-body-secondary">
           <div class="d-flex justify-content-end gap-2">
+            <!-------- Botones Send/cancel---------->
             <button type="reset" class="btn btn-secondary">Cancel</button>
             <button type="submit" class="btn btn-primary">Send</button>
           </div>
-        </div>
+        </footer>
       </form>
       </div>
     </main>
